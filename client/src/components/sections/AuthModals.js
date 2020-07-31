@@ -7,6 +7,7 @@ import { Link, useHistory } from "react-router-dom";
 export default function AuthModals() {
   //SIGNUP STATES
   const [name, setName] = useState("");
+  const [referred, setReferred] = useState("");
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -245,6 +246,19 @@ export default function AuthModals() {
                 </p>
 
                 <div className="col-12 mb-3">
+                  <label for="refer">
+                    REFFERED BY
+                    <span style={{ color: "red", fontSize: "20px" }}>*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="refer"
+                    id="refer"
+                    value={referred}
+                    onChange={(e) => setReferred(e.target.value)}
+                    required
+                  />
                   <label for="name">
                     FULLNAME
                     <span style={{ color: "red", fontSize: "20px" }}>*</span>

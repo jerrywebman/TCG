@@ -3,7 +3,6 @@ import firebase from "./firebase";
 import { AuthContext } from "../context/Auth";
 import { useHistory, Link } from "react-router-dom";
 import Image from "../elements/Image";
-import Menu from "../sections/Menu";
 // import axios from "axios";
 // import * as emailjs from "emailjs-com";
 
@@ -212,6 +211,7 @@ export default function Users() {
           <div className="row mt-4 mb-4"></div>
           <div className="page-content mt-3">
             <div className="container-fluid">
+              {/* //account info */}
               <div className="row">
                 <div className="col-lg-4">
                   <div className="card">

@@ -5,7 +5,6 @@ import { Link, useHistory } from "react-router-dom";
 import Logo from "./partials/Logo";
 import firebase from "../auth/firebase";
 import { AuthContext } from "../context/Auth";
-import Alert from "react-bootstrap/Alert";
 
 const propTypes = {
   navPosition: PropTypes.string,
@@ -33,7 +32,7 @@ const Header = ({
   ...props
 }) => {
   //AUTHENTICATION STATE
-  const { currentUser, isAdmin } = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   const [isActive, setIsactive] = useState(false);
 
   const nav = useRef(null);
